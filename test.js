@@ -1,5 +1,5 @@
-var dubaiLocation = {
-  Name: 'dubai',
+var limaLocation = {
+  Name: 'lima',
   minCustomers: 3,
   maxCustomers: 24,
   avgCookieSale: 1.2,
@@ -37,19 +37,19 @@ var dubaiLocation = {
   render: function(){
     // loop over cookies each hour the create and append to page
     // render to the dom
-    var dubaiList = document.getElementById('dubai');
-    var dubaiSection = document.getElementById('dubai-list');
+    var limaList = document.getElementById('lima');
+    var limaSection = document.getElementById('lima-list');
     //make h2
     var h2Element = document.createElement('h2');
     //insert text
     h2Element.textContent = this.Name;
     // append to the page
-    dubaiSection.appendChild(h2Element);
+    limaSection.appendChild(h2Element);
     
     for(var i=0; i<this.cookiesSoldEachHour.length;i++){
       var liElement = document.createElement('li');
       liElement.textContent = this.cookiesSoldEachHour[i]
-      dubaiList.appendChild(liElement);
+      limaList.appendChild(liElement);
     }
     
 
@@ -62,11 +62,11 @@ var dubaiLocation = {
 }
 
 
-dubaiLocation.makeCustPerHour();
-dubaiLocation.makeCookieSoldEachHour();
-dubaiLocation.render();
+limaLocation.makeCustPerHour();
+limaLocation.makeCookieSoldEachHour();
+limaLocation.render();
 
-//console.log(dubaiLocation.makeCookieSoldEachHour);
-console.log(dubaiLocation.allCookiesNeeded);
-console.log(dubaiLocation.cookiesSoldEachHour);
-console.log(dubaiLocation.custPerHourArray);
+//console.log(limaLocation.makeCookieSoldEachHour);
+console.log(limaLocation.allCookiesNeeded);
+console.log(limaLocation.cookiesSoldEachHour);
+console.log(limaLocation.custPerHourArray);
