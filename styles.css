@@ -252,11 +252,6 @@ div#welcome {
   margin: auto;
 }
 
-div#welcome + a:link {
-  color: ;
-  
-}
-
 
 
 
@@ -389,7 +384,7 @@ div ul{
 .table-content-wrapper{
   
 
-  margin-top: ;
+  margin-top: 0;
   padding: 0;
   background-color: #133129;
   
