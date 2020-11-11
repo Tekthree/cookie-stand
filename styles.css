@@ -1,0 +1,419 @@
+* {
+   box-sizing: border-box; 
+  }
+
+body{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Vollkorn', serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 6rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #071a14;
+  
+
+
+}
+
+
+h6{
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+  font-style: normal;
+}
+
+
+@media screen and (max-width: 600px) {
+  .hero-wrapper .hero-content-wrapper h6{
+    
+    font-size: 20px;
+  
+  }
+
+  
+}
+
+.container{
+  padding: 0;
+  margin: 0 auto;
+  width: 100vw;
+  
+ 
+
+
+}
+
+a:visited {
+  color:#f6eadd;
+}
+
+a:hover {
+  background-color: #f06c39;
+  
+}
+
+a {
+  font-size: 20px;
+  letter-spacing: .05rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+
+  color:#f6eadd;
+  text-decoration: none; 
+  
+}
+
+
+.menu-wrapper a:nth-child(1), .menu-wrapper a:nth-child(2){
+  margin-right: 30px;
+}
+
+
+nav .nav-wrapper {
+  padding: 0 40px 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #f6eadd;
+  background-color: #133129;
+  height: 100px;
+
+  
+
+}
+
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+.logo-wrapper a:link h3 {
+  color: #f6eadd;
+  font-size: clamp(1.88rem, 5vw, 2.85rem);
+}
+
+
+
+
+.hero-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  /*credit to By twenty20photos downloaded on envato*/
+  background: url('/images/seattle.jpg');
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  position: relative; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  
+}
+
+.hero-wrapper::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #133129;
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: .8;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.hero-wrapper > * {
+  z-index: 10;
+  
+}
+
+.hero-content-wrapper{
+  padding: 30px;
+  max-width: clamp(1000px,500px,800px);
+  margin: auto;
+}
+
+.hero-wrapper h1 {
+  
+  font-size: clamp(4.8rem, 11vw, 7.25rem);
+  line-height: 7rem;
+  color: #f6eadd;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-wrapper h1 {
+  
+    
+    line-height: 5rem;
+   
+  }
+}
+
+.hero-wrapper h6 {
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #f06c39;
+  padding: 0;
+  margin: 0;
+  
+}
+
+
+
+
+
+/*--------------end of header -------------*/
+.location {
+  background-color: #f8eadc;
+  margin-top: -20px;
+}
+.about-section{
+  
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  max-width: 1500px;
+  margin: auto;
+  
+}
+
+@media screen and (max-width: 700px) {
+  .about-section{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1500px;
+    margin: auto;
+    
+  }
+
+  
+  .first-image{ 
+    width: 100vw;
+    height: 500px;
+    
+  
+
+  }
+  .second-image{ 
+    width: 100vw;
+    height: 500px;
+    
+  
+
+  }
+}
+
+#location .about-section {
+ 
+  padding: 8%;
+  margin-top: 20px;
+  
+
+}
+
+
+
+.first-image{ 
+  
+
+ 
+  background-image: url('/images/family.jpg');
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+
+
+div#welcome {
+  font-size: 22px;
+  line-height: 3rem;
+  max-width: 500px;
+  padding: 0 0 0 30px;
+  margin: auto;
+}
+
+div#welcome + a:link {
+  color: ;
+  
+}
+
+
+
+
+
+
+/* --------------- start of the about us section on about us page --------------------*/
+
+
+
+.about-us-section{
+  height: 50vh;
+  background-image: url(/images/chinook.jpg);
+  background-size: auto;
+  background-position: right;
+  background-repeat: repeat;
+  background-color: #133129;
+  background-blend-mode: multiply;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.about-us-section::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #1e473d;
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: .7;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.about-us-section > * {
+  display: flex;
+  max-width: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(4.8rem, 11vw, 7.25rem);
+  color: #f8eadc;
+  z-index: 10;
+  
+  
+}
+
+.image-grid-wrapper{
+  transform: translateY(-150px);
+  margin-top: -40px;
+  border-radius: 20px;
+  padding: 5%;
+  display: grid;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #f3f0eb;
+  z-index: 20;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.images-grid{
+  background-color: #f8eadc;
+  height: 250vh;
+}
+
+.store-loc {
+  width: 1200px;
+  margin: auto;
+  
+
+
+
+}
+
+
+.second-image{ 
+  
+
+ 
+  background-image: url('/images/fish.jpg');
+  background-position: bottom; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.store-loc{
+  text-align: center;
+  padding: 40px;
+  background-color: #f3f0eb;
+  margin: 10% auto 10% auto;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.store-loc h4{
+
+  font-size: 30px;
+  padding: 0;
+}
+
+
+
+ul > li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+div ul{
+  padding: 0;
+  margin: 0;
+}
+
+
+.table-content {
+  padding-top: 10%;
+  background-color: #f8eadc;
+  max-width: 1200px;
+  margin: auto;
+  
+}
+
+.table-content-wrapper{
+  
+
+  margin-top: ;
+  padding: 0;
+  background-color: #133129;
+  
+}
+
+table{
+  margin: auto;
+  padding: 40px;
+  font-size: 20px;
+}
+
+.table-content h1 {
+  margin: auto;
+  max-width: 500px;
+  font-size: clamp(3.8rem, 4vw, 3.25rem);
+  text-align: center;
+}
+
+.table-content img{
+
+  
+
+  transform: translateX(450px);
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
