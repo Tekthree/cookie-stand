@@ -111,7 +111,7 @@ nav {
   width: 100%;
   height: 80vh;
   /*credit to By twenty20photos downloaded on envato*/
-  background: url('/images/seattle.jpg');
+  background: url('./images/seattle.jpg');
   background-position: bottom; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -236,7 +236,7 @@ nav {
   
 
  
-  background-image: url('/images/family.jpg');
+  background-image: url('./images/family.jpg');
   background-position: bottom; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -263,7 +263,7 @@ div#welcome {
 
 .about-us-section{
   height: 50vh;
-  background-image: url(/images/chinook.jpg);
+  background-image: url(./images/chinook.jpg);
   background-size: auto;
   background-position: right;
   background-repeat: repeat;
@@ -337,7 +337,7 @@ div#welcome {
   
 
  
-  background-image: url('/images/fish.jpg');
+  background-image: url('./images/fish.jpg');
   background-position: bottom; 
   background-repeat: no-repeat; 
   background-size: cover;
