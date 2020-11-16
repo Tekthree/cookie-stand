@@ -379,7 +379,7 @@ div ul{
 
 .table-content{
   background-color: #f8eadc;
-  height: 120%;
+  
 }
 
 
@@ -454,6 +454,34 @@ tbody tr{
 }
 
 
+
+fieldset{
+  margin: auto;
+}
+
+
+#new-store-form{
+  height: 100%;
+  max-width: 300px;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+label{
+  
+  font-size: 23px;
+}
+
+#spacer{
+  height: 100px;
+}
+
+.field{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: 1em;
+  margin-bottom: 1em;
+
 /*------------------------form-----------------------*/
 
 #new-store-form{
@@ -469,6 +497,7 @@ label, button{
   font-size: 23px;
   align-items: center;
   justify-content: center;
+
 }
 
 input{
@@ -477,6 +506,7 @@ input{
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box;    
   box-sizing: border-box;  
+
 }
 
 label{
@@ -490,4 +520,5 @@ label{
   justify-content: center;
   
   height: 100px;
+
 }

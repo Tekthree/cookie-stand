@@ -34,6 +34,7 @@ function Store (name,minCustomers,maxCustomers,avgCookieSale){
 
 Store.prototype.makeCustPerHour = function(){
 
+
   this.custPerHourArray = [];
   //find customers per hour by taking in min and max, running it through a function to get Customers per hour
   for(var i=0; i<allHours.length; i++){
@@ -121,7 +122,13 @@ function makeHeaderRow(){
 
   }
 
-  thElement.textContent = 'totals';
+
+  thElement.textContent = 'total';
+  trElement.appendChild(thElement);
+
+
+
+
 
 }
 
@@ -196,25 +203,32 @@ storeformElement.addEventListener('submit', function(event){
   //reset the table
   document.getElementById('seattle-list').innerHTML = '';
 
-  //make header row
+
+  //make header
   makeHeaderRow();
 
+  //make body
 
-  //make body row
+
+
   for(var i=0; i<allStores.length; i++){
     allStores[i].makeCustPerHour();
     allStores[i].makeCookieSoldEachHour();
     allStores[i].render();
   }
+
+
+
+
+
+
+
   
 
-  //make footer row
   makeFooterRow();
 
 
 
-  console.log(city);
-  console.log(minCustomers, maxCustomers, averagecookieSale);
 
 
 });
