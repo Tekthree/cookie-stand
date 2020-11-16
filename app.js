@@ -155,11 +155,19 @@ function makeFooterRow(){
   }
   var totaltotals = 0;
 
-  for(var i =0; i < allStores.length;i++){
-    totaltotals =+ allStores[i].allCookiesNeeded
+
+  totalOfTotals = 0;
+
+  for(var i = 0; i < allStores.length; i++ ){
+    totalOfTotals += allStores[i].allCookiesNeeded;
 
   }
-  tdElement.textContent = totaltotals;
+
+  tdElement.textContent = totalOfTotals;
+  tdElement.appendChild(tdElement);
+  
+  
+
 
 }
 
