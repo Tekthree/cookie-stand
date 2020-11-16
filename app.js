@@ -33,6 +33,7 @@ function Store (name,minCustomers,maxCustomers,avgCookieSale){
 
 
 Store.prototype.makeCustPerHour = function(){
+  this.custPerHourArray = [];
   //find customers per hour by taking in min and max, running it through a function to get Customers per hour
   for(var i=0; i<allHours.length; i++){
     
@@ -44,6 +45,7 @@ Store.prototype.makeCustPerHour = function(){
   
   
 Store.prototype.makeCookieSoldEachHour = function(){
+  this.cookiesSoldEachHour = [];
   // loop over customers per hour array and times it to average cookie sale and push into cookies sold each hour array
   for(var i=0; i<this.custPerHourArray.length; i++){
 
@@ -111,12 +113,15 @@ function makeHeaderRow(){
   trElement.appendChild(thElement);
 
   //loop over hours and add them to the table header
-  for(var i = 0; i < allHours.length; i++){
+  for(var i = 0; i < allHours.length+1; i++){
     thElement = document.createElement('th');
     thElement.textContent = allHours[i];
     trElement.appendChild(thElement);
 
   }
+
+  thElement.textContent = 'total';
+  trElement.appendChild(thElement);
 
 
 
@@ -187,6 +192,24 @@ storeformElement.addEventListener('submit', function(event){
   new Store(city, minCustomers, maxCustomers, averagecookieSale)
 
   document.getElementById('seattle-list').innerHTML = '';
+
+  //
+  makeHeaderRow();
+
+  for(var i=0; i<allStores.length; i++){
+    allStores[i].makeCustPerHour();
+    allStores[i].makeCookieSoldEachHour();
+    allStores[i].render();
+  }
+
+
+
+
+
+  makeFooterRow();
+
+
+
 
   console.log(city);
   console.log(minCustomers, maxCustomers, averagecookieSale);
