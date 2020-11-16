@@ -114,14 +114,14 @@ function makeHeaderRow(){
   trElement.appendChild(thElement);
 
   //loop over hours and add them to the table header
-  for(var i = 0; i < allHours.length; i++){
+  for(var i = 0; i < allHours.length+1; i++){
     thElement = document.createElement('th');
     thElement.textContent = allHours[i];
     trElement.appendChild(thElement);
 
   }
 
-
+  thElement.textContent = 'totals';
 
 }
 
@@ -138,7 +138,7 @@ function makeFooterRow(){
   tdElement.textContent = 'Totals';
   trElement.appendChild(tdElement);
 
-  for( var i = 0; i<allHours.length; i++){
+  for( var i = 0; i<allHours.length+1; i++){
 
     var totalhours = 0;
 
@@ -153,8 +153,13 @@ function makeFooterRow(){
     trElement.appendChild(tdElement);
 
   }
+  var totaltotals = 0;
 
-  
+  for(var i =0; i < allStores.length;i++){
+    totaltotals =+ allStores[i].allCookiesNeeded
+
+  }
+  tdElement.textContent = totaltotals;
 
 }
 
@@ -182,7 +187,7 @@ storeformElement.addEventListener('submit', function(event){
   new Store(city, minCustomers, maxCustomers, averagecookieSale)
   //reset the table
   document.getElementById('seattle-list').innerHTML = '';
-  
+
   //make header row
   makeHeaderRow();
 
@@ -209,11 +214,11 @@ storeformElement.addEventListener('submit', function(event){
 
 makeHeaderRow();
 
-for(var i=0; i<allStores.length; i++){
-  allStores[i].makeCustPerHour();
-  allStores[i].makeCookieSoldEachHour();
-  allStores[i].render();
-}
+// for(var i=0; i<allStores.length; i++){
+//   allStores[i].makeCustPerHour();
+//   allStores[i].makeCookieSoldEachHour();
+//   allStores[i].render();
+// }
 
 
 
