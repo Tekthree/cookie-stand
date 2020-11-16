@@ -33,6 +33,8 @@ function Store (name,minCustomers,maxCustomers,avgCookieSale){
 
 
 Store.prototype.makeCustPerHour = function(){
+
+  this.custPerHourArray = [];
   //find customers per hour by taking in min and max, running it through a function to get Customers per hour
   for(var i=0; i<allHours.length; i++){
     
@@ -44,6 +46,7 @@ Store.prototype.makeCustPerHour = function(){
   
   
 Store.prototype.makeCookieSoldEachHour = function(){
+  this.cookiesSoldEachHour = [];
   // loop over customers per hour array and times it to average cookie sale and push into cookies sold each hour array
   for(var i=0; i<this.custPerHourArray.length; i++){
 
@@ -175,10 +178,27 @@ storeformElement.addEventListener('submit', function(event){
   var minCustomers = Number(event.target.minCustomers.value);
   var maxCustomers = Number(event.target.maxCustomers.value);
   var averagecookieSale = Number(event.target.averageCookieSales.value);
-
+  // make new abject with form input
   new Store(city, minCustomers, maxCustomers, averagecookieSale)
-
+  //reset the table
   document.getElementById('seattle-list').innerHTML = '';
+  
+  //make header row
+  makeHeaderRow();
+
+
+  //make body row
+  for(var i=0; i<allStores.length; i++){
+    allStores[i].makeCustPerHour();
+    allStores[i].makeCookieSoldEachHour();
+    allStores[i].render();
+  }
+  
+
+  //make footer row
+  makeFooterRow();
+
+
 
   console.log(city);
   console.log(minCustomers, maxCustomers, averagecookieSale);
@@ -188,6 +208,12 @@ storeformElement.addEventListener('submit', function(event){
 
 
 makeHeaderRow();
+
+for(var i=0; i<allStores.length; i++){
+  allStores[i].makeCustPerHour();
+  allStores[i].makeCookieSoldEachHour();
+  allStores[i].render();
+}
 
 
 
