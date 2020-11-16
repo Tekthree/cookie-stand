@@ -135,7 +135,7 @@ function makeFooterRow(){
   tdElement.textContent = 'Totals';
   trElement.appendChild(tdElement);
 
-  for( var i = 0; i<allHours.length; i++){
+  for( var i = 0; i<allHours.length+1; i++){
 
     var totalhours = 0;
 
@@ -151,7 +151,15 @@ function makeFooterRow(){
 
   }
 
-  
+  totalOfTotals = 0;
+
+  for(var i = 0; i < allStores.length; i++ ){
+    totalOfTotals += allStores[i].allCookiesNeeded;
+
+  }
+
+  tdElement.textContent = totalOfTotals;
+  tdElement.appendChild(tdElement);
 
 }
 
