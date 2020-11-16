@@ -193,8 +193,10 @@ storeformElement.addEventListener('submit', function(event){
 
   document.getElementById('seattle-list').innerHTML = '';
 
-  //
+  //make header
   makeHeaderRow();
+
+  //make body
 
   for(var i=0; i<allStores.length; i++){
     allStores[i].makeCustPerHour();
@@ -205,14 +207,13 @@ storeformElement.addEventListener('submit', function(event){
 
 
 
-
+ //make footer
   makeFooterRow();
 
 
 
 
-  console.log(city);
-  console.log(minCustomers, maxCustomers, averagecookieSale);
+
 
 
 });
