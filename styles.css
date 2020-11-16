@@ -379,7 +379,7 @@ div ul{
 
 .table-content{
   background-color: #f8eadc;
-  height: 150vh;
+  height: 120%;
 }
 
 
@@ -454,3 +454,40 @@ tbody tr{
 }
 
 
+/*------------------------form-----------------------*/
+
+#new-store-form{
+  padding-bottom: 5%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+label, button{
+
+  margin: auto;
+  display: flex;
+  font-size: 23px;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  width: 250px;
+  padding: 5px;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;  
+}
+
+label{
+  padding: 20px;
+}
+
+
+.spacer{
+  background-color:#f8eadc;
+  display: flex;
+  justify-content: center;
+  
+  height: 100px;
+}

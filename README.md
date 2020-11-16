@@ -6,3 +6,14 @@ Salmon cookie web App
 
 ### Made by
 - Tek Jones
+
+
+## Date
+November 6th, 2020
+
+
+
+## Versions
+- css
+- form
+- css positioning 
