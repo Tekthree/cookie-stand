@@ -155,11 +155,40 @@ function makeFooterRow(){
 
 }
 
+
+
+
+
+
+
+
+
+
+//grab info from from and add to table row
+
+var storeformElement = document.getElementById('new-store-form');
+storeformElement.addEventListener('submit', function(event){
+  event.preventDefault();
   
-  
+  //grab info from new-store-form
+  var city = event.target.city.value;
+  var minCustomers = Number(event.target.minCustomers.value);
+  var maxCustomers = Number(event.target.maxCustomers.value);
+  var averagecookieSale = Number(event.target.averageCookieSales.value);
+
+  new Store(city, minCustomers, maxCustomers, averagecookieSale)
+
+  document.getElementById('seattle-list').innerHTML = '';
+
+  console.log(city);
+  console.log(minCustomers, maxCustomers, averagecookieSale);
+
+
+});
 
 
 makeHeaderRow();
+
 
 
 
@@ -196,3 +225,5 @@ Lima.render();
 
 
 makeFooterRow();
+
+

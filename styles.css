@@ -74,6 +74,8 @@ a {
 }
 
 
+
+
 nav .nav-wrapper {
   padding: 0 40px 0 40px;
   display: flex;
@@ -372,23 +374,28 @@ div ul{
   margin: 0;
 }
 
+/* -------------------------------- table --------------------------------*/
 
-.table-content {
-  padding-top: 10%;
+.table-content{
   background-color: #f8eadc;
+  height: 150vh;
+}
+
+
+
+.sales-table {
+ 
+  background-color: #f8eadc;
+  min-width: 1000px;
   max-width: 1200px;
   margin: auto;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+ 
   
 }
 
-.table-content-wrapper{
-  
-
-  margin-top: 0;
-  padding: 0;
-  background-color: #133129;
-  
-}
 
 table{
   margin: auto;
@@ -397,18 +404,52 @@ table{
 }
 
 .table-content h1 {
+  padding-top: 10%;
   margin: auto;
   max-width: 500px;
   font-size: clamp(3.8rem, 4vw, 3.25rem);
   text-align: center;
+  
 }
 
 .table-content img{
 
-  
+  display: block;
+  padding-bottom: 5%;
 
-  transform: translateX(450px);
+  margin: auto;
   max-width: 300px;
   justify-content: center;
   align-items: center;
 }
+
+
+#seattle-list tr th{
+  width: 100%;
+
+  background-color: #133129;
+  color: #f8eadc;
+  text-align: left;
+  margin: 0;
+  padding: 12px 9px;
+
+
+}
+
+
+#seattle-list tr{
+  padding: 12px 15px;
+}
+
+tbody tr{
+  border-bottom: 1px solid #c4b7aa ;
+}
+
+#seattle-list tr:nth-last-of-type(odd){
+  background-color: #eee4d9;
+}
+#seattle-list tr:last-of-type{
+  border-bottom: 4px solid #133129;
+}
+
+
